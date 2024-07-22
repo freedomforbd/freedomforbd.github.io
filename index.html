@@ -42,8 +42,8 @@
 
 <h1>Freedom for Bangladesh</h1>
 <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'Tweets')" id="defaultOpen">Tweets</button>
-    <button class="tablinks" onclick="openTab(event, 'Protests')">Protests</button>
+    <button class="tablinks" onclick="openTab(event, 'tweets')" id="defaultOpen">Tweets</button>
+    <button class="tablinks" onclick="openTab(event, 'protests')">Protests</button>
 </div>
 
 <div id="content" class="tabcontent">
@@ -73,7 +73,7 @@
                 content.innerHTML = "Content not found.";
             }
         };
-        xhr.open("GET", tabName.toLowerCase() + ".html", true);
+        xhr.open("GET", tabName + ".html", true);
         xhr.send();
     }
 
