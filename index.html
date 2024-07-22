@@ -6,80 +6,31 @@
     <title>Freedom for Bangladesh</title>
     <style>
         body { font-family: Arial, sans-serif; }
-        .tab {
-            overflow: hidden;
-            border-bottom: 1px solid #ccc;
+        .nav {
+            margin: 20px 0;
+        }
+        .nav a {
+            margin: 0 10px;
+            padding: 10px 20px;
             background-color: #f1f1f1;
-        }
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-        }
-        .tab button:hover {
-            background-color: #ddd;
-        }
-        .tab button.active {
-            background-color: #ccc;
-        }
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
             border: 1px solid #ccc;
-            border-top: none;
+            text-decoration: none;
+            color: #000;
         }
-        .tabcontent.show {
-            display: block;
+        .nav a:hover {
+            background-color: #ddd;
         }
     </style>
 </head>
 <body>
 
 <h1>Freedom for Bangladesh</h1>
-<div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'tweets')" id="defaultOpen">Tweets</button>
-    <button class="tablinks" onclick="openTab(event, 'protests')">Protests</button>
+<div class="nav">
+    <a href="tweets.html">Tweets</a>
+    <a href="protests.html">Protests</a>
 </div>
 
-<div id="content" class="tabcontent">
-    <h2>Loading...</h2>
-</div>
-
-<script>
-    function openTab(evt, tabName) {
-        var i, tablinks;
-        var content = document.getElementById("content");
-
-        // Remove active class from all tab buttons
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-
-        // Add the active class to the current button
-        evt.currentTarget.className += " active";
-
-        // Load the content of the selected tab
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                content.innerHTML = this.responseText;
-            } else if (this.readyState == 4) {
-                content.innerHTML = "Content not found.";
-            }
-        };
-        xhr.open("GET", tabName + ".html", true);
-        xhr.send();
-    }
-
-    // Open the default tab
-    document.getElementById("defaultOpen").click();
-</script>
+<p>Welcome to the Freedom for Bangladesh site. Use the links above to navigate to Tweets and Protests sections.</p>
 
 </body>
 </html>
