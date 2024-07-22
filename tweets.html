@@ -8,9 +8,32 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
             background-color: #f9f9f9;
             color: #333;
+        }
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
         }
         h2, h3, h4 {
             color: #333;
@@ -35,22 +58,31 @@
     </style>
 </head>
 <body>
-    <h2>Hashtags to use</h2>
 
+<div class="sidebar">
+    <a href="#hashtags">Hashtags to Use</a>
+    <a href="#accounts">Accounts to Follow</a>
+    <a href="#tweets-to-share">Tweets to Share</a>
+    <a href="#representatives">Representatives</a>
+    <a href="#international-organizations">International Organizations</a>
+</div>
+
+<div class="content">
+    <h2 id="hashtags">Hashtags to Use</h2>
     <p><a href="https://twitter.com/hashtag/StepDownHasina" target="_blank">#StepDownHasina</a></p>
     <p><a href="https://twitter.com/hashtag/SaveBangladeshiStudents" target="_blank">#SaveBangladeshiStudents</a></p>
 
-    <h2>Accounts to follow</h2>
+    <h2 id="accounts">Accounts to Follow</h2>
     <ul>
         <li><a href="https://x.com/ZulkarnainSaer" target="_blank">Zulkarnain Saer</a> - Investigative Journalist. Follow for updates and insights.</li>
         <li><a href="https://x.com/NetraNews" target="_blank">Netra News</a> - Netra News is an award-winning non-profit platform of public interest journalism focusing on Bangladesh.</li>
     </ul>
 
-    <h2>Tweets to Share</h2>
+    <h2 id="tweets-to-share">Tweets to Share</h2>
     
-    <h3>1. Representatives</h3>
+    <h3 id="representatives">1. Representatives</h3>
     
-    <h4>1.1 United States</h4>
+    <h4 id="us-representatives">1.1 United States</h4>
     
     <div class="tweet-container">
         <h4>1.1.1 Rep Lloyd Doggett</h4>
@@ -79,7 +111,7 @@
         </blockquote>
     </div>
     
-    <h4>1.2 Canada</h4>
+    <h4 id="canada-representatives">1.2 Canada</h4>
     
     <div class="tweet-container">
         <h4>1.2.1 Canadian Minister of National Defence Bill Blair</h4>
@@ -90,7 +122,7 @@
         </blockquote>
     </div>
     
-    <h3>2. International Organizations</h3>
+    <h3 id="international-organizations">2. International Organizations</h3>
     
     <div class="tweet-container">
         <h4>2.1 Amnesty International</h4>
@@ -111,5 +143,7 @@
     </div>
 
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
 </body>
 </html>
