@@ -69,6 +69,8 @@
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 content.innerHTML = this.responseText;
+            } else if (this.readyState == 4) {
+                content.innerHTML = "Content not found.";
             }
         };
         xhr.open("GET", tabName.toLowerCase() + ".html", true);
