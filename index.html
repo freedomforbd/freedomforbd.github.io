@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freedom For Bangladesh</title>
+    <title>Freedom for Bangladesh</title>
     <style>
         body { font-family: Arial, sans-serif; }
         .tab {
@@ -40,40 +40,42 @@
 </head>
 <body>
 
-<h1>Welcome to My GitHub Page</h1>
+<h1>Freedom for Bangladesh</h1>
 <div class="tab">
     <button class="tablinks" onclick="openTab(event, 'Tweets')" id="defaultOpen">Tweets</button>
     <button class="tablinks" onclick="openTab(event, 'Protests')">Protests</button>
 </div>
 
-<div id="Tweets" class="tabcontent">
-    <h2>Tweets</h2>
-    <blockquote class="twitter-tweet">
-        <a href="https://twitter.com/RepAOC/status/1814426498755113368">Link to the tweet</a>
-    </blockquote>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
-<div id="Protests" class="tabcontent">
-    <h2>Protests</h2>
-    <p>Content for the Protests tab goes here.</p>
+<div id="content" class="tabcontent">
+    <h2>Loading...</h2>
 </div>
 
 <script>
     function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].className = tabcontent[i].className.replace(" show", "");
-        }
+        var i, tablinks;
+        var content = document.getElementById("content");
+
+        // Remove active class from all tab buttons
         tablinks = document.getElementsByClassName("tablinks");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
-        document.getElementById(tabName).className += " show";
+
+        // Add the active class to the current button
         evt.currentTarget.className += " active";
+
+        // Load the content of the selected tab
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                content.innerHTML = this.responseText;
+            }
+        };
+        xhr.open("GET", tabName.toLowerCase() + ".html", true);
+        xhr.send();
     }
 
+    // Open the default tab
     document.getElementById("defaultOpen").click();
 </script>
 
