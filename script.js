@@ -4,4 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
         });
+
+    if (document.querySelector('.sidebar')) {
+        document.body.classList.add('has-sidebar');
+    } else {
+        document.body.classList.remove('has-sidebar');
+    }
 });
