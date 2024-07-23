@@ -55,9 +55,14 @@ body {
 }
 
 .content {
-    margin-left: 270px; /* Width of the sidebar + some margin */
+    margin-left: 0;
     padding: 20px;
     flex: 1;
+    transition: margin-left 0.3s;
+}
+
+.has-sidebar .content {
+    margin-left: 270px; /* Width of the sidebar + some margin */
 }
 
 h2, h3, h4 {
