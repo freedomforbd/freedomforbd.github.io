@@ -4,64 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tweets</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        .sidebar {
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #333;
-            padding-top: 20px;
-            overflow-x: hidden;
-        }
-        .sidebar a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            display: block;
-        }
-        .sidebar a:hover {
-            background-color: #575757;
-        }
-        .sidebar .sub-category {
-            padding-left: 30px;
-        }
-        .content {
-            margin-left: 260px;
-            padding: 20px;
-        }
-        h2, h3, h4 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-        a {
-            color: #1a0dab;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .tweet-container {
-            margin: 20px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            background-color: #fff;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div id="navbar-placeholder"></div>
 
 <div class="sidebar">
     <a href="#hashtags">Hashtags to Use</a>
@@ -171,5 +118,6 @@
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
