@@ -90,7 +90,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.petition-container, .protest-container, .template-container, .docu-container {
+.petition-container, .protest-container, .template-container, .docu-container, .media-container {
     margin: 20px 0;
     padding: 10px;
     border: 1px solid #ddd;
